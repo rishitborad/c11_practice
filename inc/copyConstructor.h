@@ -4,7 +4,11 @@ using namespace std;
 
 class copyConstructor{
 private:
+	string _name;
 public:
-	copyConstructor();
-	void foo();
+	copyConstructor() = delete;
+	copyConstructor(const string& name);
+	copyConstructor(const copyConstructor& obj);
+	copyConstructor(copyConstructor&& obj);
+	void printObjName();
 };
